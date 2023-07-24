@@ -67,29 +67,55 @@ const HeaderCategories = () => {
       <CategoriesButton
         onClick={handleClick}
         data-dir="left"
-        style={{ display: leftButtonVisible ? "block" : "none" }}
+        data-hidden={!leftButtonVisible}
       >
         <ChevronLeftIcon />
       </CategoriesButton>
       <Categories ref={ref}>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
-        <Button.Root variant="secondary">Categorias</Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
+        <Button.Root variant="secondary" size="sm">
+          Categorias
+        </Button.Root>
       </Categories>
       <CategoriesButton
         onClick={handleClick}
         data-dir="right"
-        style={{ display: rightButtonVisible ? "block" : "none" }}
+        data-hidden={!rightButtonVisible}
       >
         <ChevronRightIcon />
       </CategoriesButton>

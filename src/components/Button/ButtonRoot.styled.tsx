@@ -64,7 +64,8 @@ export const Container = styled.button<ButtonStylesProps>`
       sm: {
         height: "1.75rem",
         fontSize: "0.875rem",
-        padding: "0 0.5rem"
+        padding: "0 0.5rem",
+        fontWeight: 400
       },
       md: {
         height: "2rem",

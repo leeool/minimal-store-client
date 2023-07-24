@@ -15,8 +15,8 @@ const Header = () => {
         </LogoWrapper>
 
         <ButtonWrapper>
+          <Button.Root variant="secondary">Entrar</Button.Root>
           <Button.Root>Registrar</Button.Root>
-          <Button.Root>Entrar</Button.Root>
         </ButtonWrapper>
 
         <HeaderCategories />

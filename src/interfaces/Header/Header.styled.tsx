@@ -11,8 +11,9 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.25rem;
   overflow: hidden;
+  align-items: center;
 `
 
 export const LogoWrapper = styled.div``
