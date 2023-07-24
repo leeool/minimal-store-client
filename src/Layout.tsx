@@ -1,3 +1,4 @@
+import Footer from "@interfaces/Footer"
 import Header from "@interfaces/Header"
 import { Content, MainContainer } from "@styles/styled"
 import React from "react"
@@ -10,6 +11,7 @@ const Layout = () => {
       <Content>
         <Outlet />
       </Content>
+      <Footer />
     </MainContainer>
   )
 }

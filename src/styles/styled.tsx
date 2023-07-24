@@ -8,6 +8,7 @@ export const MainContainer = styled.div`
   justify-items: center;
   max-width: 62rem;
   margin: 0 auto;
+  height: 100vh;
 `
 
 export const Content = styled.div`
