@@ -1,4 +1,4 @@
-import { axiosInstanceWithAuth } from "@API/Instance"
+import axiosInstance, { axiosInstanceWithAuth } from "@API/Instance"
 import React from "react"
 import { useMutation } from "react-query"
 
@@ -11,9 +11,15 @@ const useStoreCheckout = () => {
   const mutation = useMutation({
     mutationKey: "storeCheckout",
     mutationFn: async (data: Props) => {
-      return axiosInstanceWithAuth.post(`/order/${data.userId}`, {
-        cartId: data.cartId
-      })
+      const token = localStorage.getItem("token")
+
+      return axiosInstance.post(
+        `/order/${data.userId}`,
+        {
+          cartId: data.cartId
+        },
+        { headers: { Authorization: `Bearer ${token}` } }
+      )
     }
   })
 
