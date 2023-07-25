@@ -5,6 +5,7 @@ export const Container = styled.footer`
   width: 100%;
   color: ${({ theme }) => theme.text.white};
   margin-bottom: 0.5rem;
+  padding: 0 0.25rem;
 
   svg,
   path {

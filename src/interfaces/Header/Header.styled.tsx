@@ -3,8 +3,12 @@ import styled from "styled-components"
 export const Container = styled.header`
   display: grid;
   width: 100%;
-  max-width: 62rem;
+  border-bottom: 2px solid ${({ theme }) => theme.outline.primary};
   padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  max-width: 63rem;
+  background-color: ${({ theme }) => theme.bg.white};
 `
 
 export const Content = styled.div`
@@ -14,12 +18,13 @@ export const Content = styled.div`
   gap: 0.25rem;
   overflow: hidden;
   align-items: center;
+  padding: 0 0.25rem;
 `
 
 export const LogoWrapper = styled.div``
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-self: end;
 `

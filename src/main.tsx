@@ -6,12 +6,19 @@ import { ThemeProvider } from "styled-components"
 import theme from "@styles/theme"
 import { RouterProvider } from "react-router"
 import router from "@routes.tsx"
+import { QueryClient, QueryClientProvider } from "react-query"
+
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { refetchOnWindowFocus: false } }
+})
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <GlobalStyle />
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </ThemeProvider>
   </React.StrictMode>
 )

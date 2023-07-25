@@ -6,12 +6,15 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
-  max-width: 62rem;
+  max-width: 63rem;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 0.5rem;
 `
 
 export const Content = styled.div`
   flex: 1;
   width: 100%;
+  padding: 0 0.25rem;
+  margin: 8rem 0;
 `

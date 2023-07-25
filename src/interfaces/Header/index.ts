@@ -1,3 +1,3 @@
-import Header from "./Header"
+import { HeaderLoggedIn, HeaderLoggedOut } from "./Header"
 
-export default Header
+export { HeaderLoggedIn, HeaderLoggedOut }

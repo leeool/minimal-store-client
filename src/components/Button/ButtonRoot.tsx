@@ -1,17 +1,20 @@
 import React from "react"
 import { Container, ButtonStylesProps } from "./ButtonRoot.styled"
 
-export interface ButtonRootProps {
+export interface ButtonRootProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
+  props?: React.ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 const ButtonRoot = ({
   children,
   variant,
-  size
+  size,
+  ...props
 }: ButtonRootProps & ButtonStylesProps) => {
   return (
-    <Container variant={variant} size={size}>
+    <Container variant={variant} size={size} {...props}>
       {children}
     </Container>
   )

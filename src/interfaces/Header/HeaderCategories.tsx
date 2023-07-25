@@ -10,11 +10,13 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon
 } from "@primer/octicons-react"
+import useFindAllCategories from "@queries/useFindAllCategories"
 
 const HeaderCategories = () => {
   const ref = React.useRef<HTMLDivElement>(null)
   const [leftButtonVisible, setLeftButtonVisible] = React.useState(false)
   const [rightButtonVisible, setRightButtonVisible] = React.useState(true)
+  const categories = useFindAllCategories()
 
   const handleClick = (event: React.MouseEvent) => {
     if (!ref.current) return
@@ -72,45 +74,11 @@ const HeaderCategories = () => {
         <ChevronLeftIcon />
       </CategoriesButton>
       <Categories ref={ref}>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
-        <Button.Root variant="secondary" size="sm">
-          Categorias
-        </Button.Root>
+        {categories.data?.map((category) => (
+          <Button.Root variant="secondary" size="sm" key={category.id}>
+            {category.name}
+          </Button.Root>
+        ))}
       </Categories>
       <CategoriesButton
         onClick={handleClick}

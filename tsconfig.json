@@ -29,7 +29,9 @@
       "@style/*": ["styles/*"],
       "@type/*": ["types/*"],
       "@asset/*": ["assets/*"],
-      "@interface/*": ["interfaces/*"]
+      "@interface/*": ["interfaces/*"],
+      "@mutation/*": ["mutations/*"],
+      "@query/*": ["queries/*"],
     }
   },
   "include": ["src"],

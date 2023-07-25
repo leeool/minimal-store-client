@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Categories = styled.nav`
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   overflow-x: auto;
   scrollbar-width: none;
   white-space: nowrap;

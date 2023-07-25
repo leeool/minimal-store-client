@@ -1,4 +1,10 @@
 import Layout from "@Layout"
+import Checkout from "@pages/Checkout"
+import Home from "@pages/Home"
+import Login from "@pages/Login"
+import LoginLayout from "@pages/LoginLayout"
+import ProductPage from "@pages/ProductPage"
+import Register from "@pages/Register"
 import { createBrowserRouter } from "react-router-dom"
 
 const router = createBrowserRouter([
@@ -8,13 +14,31 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        Component: () => <div>Home</div>
+        Component: Home
+      },
+      {
+        path: "finalizar",
+        Component: Checkout
+      },
+      {
+        path: ":id",
+        Component: ProductPage
       }
     ]
   },
   {
-    path: "login",
-    Component: () => <div>Login</div>
+    path: "entrar",
+    Component: LoginLayout,
+    children: [
+      {
+        path: "",
+        Component: Login
+      },
+      {
+        path: "registrar",
+        Component: Register
+      }
+    ]
   }
 ])
 

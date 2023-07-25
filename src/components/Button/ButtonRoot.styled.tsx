@@ -18,7 +18,7 @@ export const Container = styled.button<ButtonStylesProps>`
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   height: 2rem;
   color: ${({ theme }) => theme.text.primary};
   background: ${({ theme }) => theme.bg.secondary};
