@@ -9,7 +9,7 @@ import {
   SimilarProducts
 } from "./ProductPage.styled"
 import useShowProduct from "@queries/useShowProduct"
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import ProductPageImages from "./ProductPageImages"
 import BlackHighlight from "@components/BlackHighlight"
 import { CreditCardIcon, HeartFillIcon } from "@primer/octicons-react"
@@ -29,16 +29,17 @@ const ProductPage = () => {
   const mutation = useStoreCartItem()
   const cartItems = useUserStore((state) => state.cartItems)
   const user = useUserStore((state) => state.user)
+  const nav = useNavigate()
 
   React.useEffect(() => {
     console.log(product.data)
   }, [product.data])
 
   const handleStore = () => {
+    if (!user) return nav("/entrar/registrar")
+
     if (cartItems.find((item) => item.product.id === id))
       return console.log("Item já está no carrinho")
-
-    if (!user) return console.log("Usuário não está logado")
 
     mutation.mutate({
       productId: id as string,

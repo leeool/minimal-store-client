@@ -50,7 +50,7 @@ const StageOne = () => {
     console.log(data)
 
     if (!email || !password || !passwordConfirm) return
-    else if (password !== passwordConfirm) return
+    else if (password !== passwordConfirm) return alert("Senhas não coincidem")
 
     setEmail(email)
     setPassword(password)
