@@ -19,14 +19,7 @@ const Cart = ({ children }: CartProps) => {
   const query = useGetUserCart(user?.id)
   const cartItems = useUserStore((state) => state.cartItems)
   const setCart = useUserStore((state) => state.setCart)
-
-  React.useEffect(() => {
-    if (query.isSuccess) {
-      setCart(query.data)
-    } else if (query.isError) {
-      console.log(query.refetch())
-    }
-  }, [query])
+  const cart = useUserStore((state) => state.cart)
 
   return (
     <Dialog.Root>

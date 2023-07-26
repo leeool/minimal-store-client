@@ -24,6 +24,7 @@ import useStoreCheckout from "@mutations/useStoreCheckout"
 import DialogNotify from "@interfaces/DialogNotify/DialogNotify"
 import useDialogNotifyStore from "@interfaces/DialogNotify/useDialogNotifyStore"
 import { useNavigate } from "react-router"
+import useGetUserCart from "@queries/useGetUserCart"
 
 const Checkout = () => {
   const stage = useCheckoutStore((state) => state.stage)
@@ -85,6 +86,7 @@ const CheckoutTwo = () => {
   const cart = useUserStore((state) => state.cart)
   const mutation = useStoreCheckout()
   const setOpen = useDialogNotifyStore((state) => state.setOpen)
+  const cartQuery = useGetUserCart(user?.id)
 
   const handleClick = () => {
     if (!user) return alert("Usuário não está logado")
@@ -140,8 +142,13 @@ const CheckoutTwo = () => {
           <ArrowLeftIcon />
           Voltar
         </Button.Root>
-        <Button.Root onClick={handleClick}>
-          Comprar
+        <Button.Root
+          onClick={handleClick}
+          data-loading={mutation.isLoading || cartQuery.isLoading}
+        >
+          {mutation.isLoading || cartQuery.isLoading
+            ? "Carregando..."
+            : "Comprar"}
           <CheckIcon />
         </Button.Root>
       </ButtonWrapper>

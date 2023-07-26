@@ -39,6 +39,11 @@ export const Container = styled.button<ButtonStylesProps>`
     cursor: not-allowed;
   }
 
+  &[data-loading="true"] {
+    cursor: wait;
+    opacity: 0.5;
+  }
+
   ${variant({
     prop: "variant",
     variants: {
