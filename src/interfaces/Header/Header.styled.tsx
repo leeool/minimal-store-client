@@ -16,15 +16,26 @@ export const Content = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   gap: 0.25rem;
+  column-gap: 1rem;
   overflow: hidden;
   align-items: center;
   padding: 0 0.25rem;
 `
 
-export const LogoWrapper = styled.div``
+export const LogoWrapper = styled.div`
+  @media (max-width: 768px) {
+    svg {
+      max-width: 100%;
+    }
+  }
+`
 
 export const ButtonWrapper = styled.div`
   display: flex;
   gap: 1rem;
   justify-self: end;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `

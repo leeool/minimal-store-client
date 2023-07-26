@@ -167,9 +167,12 @@ const StageTwo = () => {
           <Input.Label htmlFor="cpf">CPF</Input.Label>
           <Input.Base
             id="cpf"
-            // type="number"
             defaultValue={cpf}
-            {...register("cpf", { required: true })}
+            {...register("cpf", {
+              required: true,
+              minLength: 14,
+              maxLength: 14
+            })}
             onChange={({ target }) => {
               const cleanedValue = target.value
                 .replace(/\D/g, "")

@@ -21,6 +21,10 @@ export const Content = styled.ul`
   border-radius: 0.25rem;
   padding: 1rem;
   background-color: ${({ theme }) => theme.bg.primary};
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 `
 
 export const Item = styled.li`
@@ -44,7 +48,7 @@ export const Item = styled.li`
 
 export const Rights = styled.p`
   grid-column: 1 / -1;
-  grid-row: 2;
+  grid-row: 5;
   justify-self: center;
   margin-top: 0.5rem;
 `
