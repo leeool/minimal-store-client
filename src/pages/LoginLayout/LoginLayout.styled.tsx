@@ -2,7 +2,14 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   display: grid;
+  min-height: 100vh;
   grid-template-columns: minmax(min-content, 1fr) 0.6fr;
+
+  @media (max-width: 768px) {
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Content = styled.div`
@@ -24,6 +31,10 @@ export const Content = styled.div`
   .minimal {
     /* transform: translateX(-25%); */
     animation: slideLeft 200s linear infinite alternate;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 
   @keyframes slideLeft {
