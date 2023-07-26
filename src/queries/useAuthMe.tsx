@@ -16,8 +16,6 @@ const useAuthMe = () => {
         return Promise.reject("Token not found")
       }
 
-      console.log(token)
-
       return axiosInstance
         .get("/auth/me", { headers: { Authorization: "Bearer " + token } })
         .then((res) => res.data)

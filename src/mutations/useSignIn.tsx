@@ -14,7 +14,6 @@ const useSignIn = () => {
       return axiosInstance.post("/auth/signin", data).then((res) => res.data)
     },
     onSuccess: (data: { token: string }) => {
-      console.log("User signed in")
       localStorage.setItem("token", data.token)
     }
   })

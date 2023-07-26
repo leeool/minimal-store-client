@@ -9,8 +9,6 @@ const useSignUp = () => {
       return axiosInstance.post("/auth/signup", data).then((res) => res.data)
     },
     onSuccess: (data: { token: string }) => {
-      console.log("User signed up")
-
       localStorage.setItem("token", data.token)
     }
   })

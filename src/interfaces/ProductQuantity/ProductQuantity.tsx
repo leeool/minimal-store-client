@@ -53,8 +53,6 @@ const ProductQuantity = ({ cartItem }: Props) => {
         }
       })
     }
-
-    console.log(method)
   }
   return (
     <Container onClick={handleSubmit}>

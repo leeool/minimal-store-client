@@ -26,7 +26,7 @@ const useStoreCartItem = () => {
         .then((res) => res.data)
     },
     onSuccess: (data: ICartItem[]) => {
-      console.log("Item stored")
+      ;("Item stored")
 
       setCartItems(data)
     }

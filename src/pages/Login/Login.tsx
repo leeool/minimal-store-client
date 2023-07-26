@@ -27,8 +27,6 @@ const Login = () => {
         }
       }
     )
-
-    console.log({ email, password })
   })
 
   return (

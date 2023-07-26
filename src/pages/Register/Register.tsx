@@ -47,8 +47,6 @@ const StageOne = () => {
   const handleNext = handleSubmit((data) => {
     const { email, password, passwordConfirm } = data
 
-    console.log(data)
-
     if (!email || !password || !passwordConfirm) return
     else if (password !== passwordConfirm) return alert("Senhas não coincidem")
 
@@ -138,8 +136,6 @@ const StageTwo = () => {
         }
       }
     )
-
-    console.log({ name, cpf, address, email, password })
   })
 
   return (

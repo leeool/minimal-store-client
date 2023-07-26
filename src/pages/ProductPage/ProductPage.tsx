@@ -31,10 +31,6 @@ const ProductPage = () => {
   const user = useUserStore((state) => state.user)
   const nav = useNavigate()
 
-  React.useEffect(() => {
-    console.log(product.data)
-  }, [product.data])
-
   const handleStore = () => {
     if (!user) return nav("/entrar/registrar")
 

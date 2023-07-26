@@ -13,8 +13,6 @@ const useDeleteCartItem = (id: string) => {
       return axiosInstance.delete(`/cart-item/${id}`)
     },
     onSuccess: () => {
-      console.log("Item deleted")
-
       setCartItems(cartItems.filter((item) => item.id !== id))
     }
   })
