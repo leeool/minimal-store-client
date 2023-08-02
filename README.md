@@ -2,6 +2,8 @@
 A loja de produtos minimalistas.
 
 ## Detalhes do projeto
+- [Deploy](https://minimalstoreweb.netlify.app/)
+  - OBS: Com o propósito de preservar os recursos gratuitos do Microsoft Azure, o back-end e banco de dados poderá estar desativado.
 - [Repositório do Server](https://github.com/leeool/minimal-store-server)
 - [Figma](https://www.figma.com/file/0fElFU2ZojqMxCl7KrkS9A/MINIMAL-TECH?type=design&node-id=21%3A232&mode=dev)
 
