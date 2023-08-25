@@ -5,7 +5,7 @@ A loja de produtos minimalistas.
 - [Primer Design System](https://primer.style/design/https://primer.style/design/) foi a padronização de UI utilizado.
 - [Deploy](https://minimalstoreweb.netlify.app/)
   - Aviso: Com o propósito de preservar os recursos gratuitos do Microsoft Azure, o back-end e banco de dados estará temporariamente desativado.
-  - > Caso tenha interesse em conhecer o projeto, entre em contato comigo.
+  - > Caso tenha interesse em conhecer o projeto, entre em contato!
 - [Repositório do Server](https://github.com/leeool/minimal-store-server)
 - [Figma](https://www.figma.com/file/0fElFU2ZojqMxCl7KrkS9A/MINIMAL-TECH?type=design&node-id=21%3A232&mode=dev)
 
